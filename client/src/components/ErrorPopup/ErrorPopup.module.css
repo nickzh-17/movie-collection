@@ -1,0 +1,27 @@
+.popup {
+	z-index: 10;
+	width: 40vw;
+	min-height: var(--length-st-5);
+
+	padding: var(--length-st-4);
+	border-radius: var(--bord-rad-lvl-2);
+
+	display: flex;
+	flex-direction: column;
+	gap: var(--length-st-3);
+
+	background: var(--color-bg-second);
+
+	position: absolute;
+	left: calc(25vw - var(--bord-rad-lvl-1) - 2 * var(--bord-rad-lvl-2));
+	top: var(--length-st-6);
+	left: 30vw;
+}
+
+.popup.error {
+	border-top: var(--bord-st-2) solid var(--color-error);
+}
+
+.button {
+	align-self: flex-end;
+}

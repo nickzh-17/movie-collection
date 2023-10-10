@@ -1,0 +1,21 @@
+:root {
+	--length-st-0: 1px;
+	--length-st-1: 2px;
+	--length-st-2: 4px;
+	--length-st-3: 8px;
+	--length-st-4: 16px;
+	--length-st-5: 32px;
+	--length-st-6: 64px;
+	--length-st-7: 128px;
+	--length-st-8: 256px;
+
+	--bord-rad-st-0: 1px;
+	--bord-rad-st-1: 2px;
+	--bord-rad-st-2: 4px;
+	--bord-rad-st-3: 8px;
+
+	--bord-st-1: 1px;
+	--bord-st-1: 2px;
+	--bord-st-2: 4px;
+	--bord-st-3: 8px;
+}
