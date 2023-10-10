@@ -5,15 +5,18 @@ const { MOVIES_FILE_PATH, MOVIE_VIEW_MODE } = require("../data/constants");
 const ImageService = require("./image-service");
 const checkMovieByMode = require("../utils/check-movie-by-mode");
 const checkMovieByQuery = require("../utils/check-movie-by-query");
+const { compareDates } = require("../utils/compare-date");
 
 class MovieSevice {
 	async #getMoviesArray() {
 		const movies = await FileService.readFile(MOVIES_FILE_PATH);
-		return movies;
+		const sortedMovies = await movies.sort((a, b) =>
+			compareDates(new Date(a.createdDate), new Date(b.createdDate), "desc")
+		);
+		return sortedMovies;
 	}
 
 	async getMovies(limit = 9, offset = 0, viewMode = MOVIE_VIEW_MODE.ALL, searchQuery = "") {
-		console.log(limit, offset, viewMode, searchQuery);
 		const movies = await this.#getMoviesArray();
 
 		const filteredMovies = movies

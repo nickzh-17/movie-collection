@@ -21,6 +21,7 @@ type FormValues = {
 	duration: string;
 	year: string;
 	image: File | null;
+	createdDate: string;
 };
 
 const initialValues: FormValues = {
@@ -30,6 +31,7 @@ const initialValues: FormValues = {
 	duration: "",
 	year: "",
 	image: null,
+	createdDate: "",
 };
 
 export type CreateMovieValues = Omit<FormValues, "image"> & {
@@ -54,7 +56,7 @@ export const NewCardForm: React.FC = () => {
 		initialValues: initialValues,
 		validationSchema,
 		onSubmit: data => {
-			console.log(data);
+			data.createdDate = Date();
 
 			const formData = new FormData();
 

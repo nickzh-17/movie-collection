@@ -16,7 +16,6 @@ export const getCustomApiError = (error: unknown): ApiError => {
 	};
 
 	if (isAxiosError(error)) {
-		console.log(error);
 		if (error.response?.status === 404) {
 			customError.message = "Не удается получить доступ к ресурсам. Попробуйте позже";
 			customError.type = "Ошибка подключения";

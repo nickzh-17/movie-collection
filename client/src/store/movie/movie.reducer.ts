@@ -2,6 +2,8 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Movie, ViewMode } from "types/movie";
 import { addMovieThunk, deleteMovieThunk, getMoviesThunk, updateMovieThunk } from "./movie.action";
 
+const VIEW_MODES_FOR_EDIT: ViewMode[] = ["all", "progress"];
+
 interface MovieState {
 	movies: Movie[];
 	totalRecords: number;
@@ -28,6 +30,12 @@ export const movieSlice = createSlice({
 			state.movies = action.payload;
 		},
 		setViewMode: (state, action: PayloadAction<ViewMode>) => {
+			if (VIEW_MODES_FOR_EDIT.includes(action.payload)) {
+				state.recordsPerPage = 9;
+			} else {
+				state.recordsPerPage = 10;
+			}
+
 			state.viewMode = action.payload;
 		},
 		setCurrentPage: (state, action: PayloadAction<number>) => {
@@ -41,7 +49,6 @@ export const movieSlice = createSlice({
 	extraReducers: builder => {
 		builder
 			.addCase(getMoviesThunk.fulfilled, (state, action) => {
-				console.log(action.payload);
 				state.movies = action.payload.data;
 				state.totalRecords = action.payload.total;
 			})

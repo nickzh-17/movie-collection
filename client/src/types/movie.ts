@@ -10,4 +10,5 @@ export type Movie = {
 	movieLength: number;
 	image: string;
 	status: ViewMode;
+	createdDate: string;
 };
