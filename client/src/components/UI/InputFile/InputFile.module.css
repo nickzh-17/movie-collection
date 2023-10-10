@@ -1,0 +1,32 @@
+.input {
+	width: 100%;
+	position: relative;
+	background: var(--color-bg-accent);
+	border-radius: var(--bord-rad-st-2);
+	overflow: hidden;
+}
+.input:hover {
+	opacity: 0.9;
+}
+.image {
+	width: 100%;
+	aspect-ratio: 5/3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.image img {
+	width: 100%;
+	aspect-ratio: 5/3;
+}
+
+.error {
+	outline: var(--length-st-1) solid var(--color-error);
+	outline-offset: calc(-1 * var(--length-st-1));
+	color: var(--color-error);
+}
+
+.inputFile {
+	display: none;
+}

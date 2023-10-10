@@ -1,0 +1,28 @@
+.card {
+	min-height: var(--length-st-8);
+
+	background: var(--color-bg-second);
+	opacity: 0.5;
+	cursor: pointer;
+	border-radius: var(--bord-rad-st-2);
+
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card.isEditing {
+	opacity: 1;
+}
+.card:not(.isEditing):hover {
+	opacity: 1;
+}
+
+.addIcon {
+	width: var(--length-st-6);
+	height: var(--length-st-6);
+
+	stroke: var(--color-bg-accent);
+}

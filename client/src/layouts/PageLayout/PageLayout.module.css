@@ -1,0 +1,24 @@
+.layout {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	background: var(--color-bg-second);
+	min-height: calc(var(--length-st-6));
+	padding: var(--length-st-4) var(--length-st-2);
+}
+
+.content {
+	background: var(--color-bg-primary);
+	width: 90%;
+	margin: var(--length-st-6) auto;
+	flex: 1 0;
+}
+
+.footer {
+	background: var(--color-bg-second);
+	min-height: calc(var(--length-st-6));
+	padding: var(--length-st-4) var(--length-st-2);
+}

@@ -1,0 +1,53 @@
+.h1,
+.h2,
+.h3,
+.p,
+.span {
+	font-family: var(--font-family);
+}
+
+.h1 {
+	font-weight: var(--fw-lvl-1);
+	font-size: var(--fz-lvl-1);
+	color: var(--color-text-primary);
+}
+
+.h2 {
+	font-weight: var(--fw-lvl-2);
+	font-size: var(--fz-lvl-2);
+	color: var(--color-text-primary);
+}
+
+.h3 {
+	font-weight: var(--fw-lvl-2);
+	font-size: var(--fz-lvl-2);
+	color: var(--color-text-second);
+}
+
+.p {
+	font-weight: var(--fw-lvl-3);
+	font-size: var(--fz-lvl-3);
+	color: var(--color-text-second);
+}
+
+.span {
+	font-weight: var(--fw-lvl-3);
+	font-size: var(--fz-lvl-4);
+	color: var(--color-text-detail);
+}
+
+.primary {
+	color: var(--color-text-primary);
+}
+.second {
+	color: var(--color-text-second);
+}
+.accent {
+	color: var(--color-text-detail);
+}
+.error {
+	color: var(--color-error);
+}
+.success {
+	color: var(--color-success);
+}

@@ -1,0 +1,20 @@
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 100px 4%;
+}
+
+.card {
+	width: calc((100% - 4% * 5) / 5);
+}
+
+@media screen and (max-width: 900px) {
+	.grid {
+		flex-direction: column;
+		flex-wrap: nowrap;
+	}
+
+	.card {
+		width: 100%;
+	}
+}

@@ -1,0 +1,41 @@
+.form {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.name,
+.name::placeholder {
+	font-weight: var(--fw-lvl-2);
+	font-size: calc(var(--fz-lvl-2) - 8px);
+	color: var(--color-text-second);
+}
+
+.subname,
+.subname::placeholder,
+.genre,
+.genre::placeholder,
+.duration,
+.duration::placeholder,
+.year,
+.year::placeholder {
+	font-weight: var(--fw-lvl-3);
+	font-size: calc(var(--fz-lvl-3) - 6px);
+	color: var(--color-text-primary);
+}
+
+.subname,
+.subname::placeholder {
+	font-size: calc(var(--fz-lvl-3) - 4px);
+}
+
+.subname,
+.genre,
+.duration,
+.year {
+	width: 60%;
+}
+
+.genre {
+	color: var(--color-text-second);
+}

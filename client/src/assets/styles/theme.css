@@ -1,0 +1,17 @@
+:root {
+	--color-bg-primary: #ffffff;
+	--color-bg-second: #f1f1f1;
+	--color-bg-accent: #c8c8c8;
+
+	--color-text-primary: #606060;
+	--color-text-second: #2a2a2a;
+	--color-text-accent: #c7c7c7;
+
+	--color-border-primary: #b2b2b2;
+	--color-border-second: #1e1e1e;
+
+	--color-success: #64d49e;
+	--color-error: #e597a9;
+
+	--color-icon-primary: var(--color-text-second);
+}

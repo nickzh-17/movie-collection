@@ -1,0 +1,25 @@
+.rate {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.scale {
+	display: flex;
+	gap: var(--length-st-4);
+}
+
+.item:hover {
+	cursor: pointer;
+	position: relative;
+}
+
+.item:hover::after {
+	content: "";
+	position: absolute;
+	display: block;
+	width: calc(100% + var(--length-st-3));
+	right: calc(-0.5 * var(--length-st-3));
+	border-bottom: var(--length-st-0) solid var(--color-border-second);
+}
