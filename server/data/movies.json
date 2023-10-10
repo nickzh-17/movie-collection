@@ -1,0 +1,123 @@
+[
+  {
+    "id": "8",
+    "name": "Дети свинга",
+    "enName": "Swing Kids",
+    "genre": "Драма",
+    "year": 1993,
+    "rating": 5,
+    "movieLength": 120,
+    "image": "https://images-s.kinorium.com/movie/shot/98655/h280_1172070.jpg?21498859120",
+    "status": "watched"
+  },
+  {
+    "id": "0091e863-37d9-4089-b0b1-06e8c75234fb",
+    "name": "Место под соснами",
+    "enName": "The Place Beyond the Pines",
+    "genre": "Криминал",
+    "year": "2012",
+    "rating": 3,
+    "image": "https://ipfs.filebase.io/ipfs/QmdmkNZyvLH9kCdM4JimhVhgbAEHdxS5tgvv37xjGpCDrw",
+    "status": "progress"
+  },
+  {
+    "id": "1fc63958-8a39-4ac7-bbb9-d1974793f94a",
+    "name": "Tenacious D: Медиатор судьбы",
+    "enName": "Tenacious D in The Pick of Destiny",
+    "genre": "Комедия",
+    "year": "2006",
+    "rating": null,
+    "image": "https://ipfs.filebase.io/ipfs/QmUAPxNCgTAZzw2aeU27uSQxRgD2jeRxuA61Q6mDS9ZKJE",
+    "status": "progress"
+  },
+  {
+    "id": "3b13b0f9-763a-4d52-bc4d-0bf0da840852",
+    "name": "Полночь в Париже",
+    "enName": "Фэнтези",
+    "genre": "Midnight in Paris",
+    "year": "2011",
+    "rating": null,
+    "image": "https://ipfs.filebase.io/ipfs/QmeZPhfP9PivK1MqVcXzCsQzPS8U98Ddh5xk8iHpKsP9uN",
+    "status": "progress"
+  },
+  {
+    "id": "24d61af4-dd4a-4c18-bf5e-05daf1b4f788",
+    "name": "Постал",
+    "enName": "Postal",
+    "genre": "Комедия",
+    "year": "2007",
+    "rating": 3,
+    "image": "https://ipfs.filebase.io/ipfs/QmXYpYCiMf7NmvytDcWCCA1yqHiNo1139XQZFREVyg9LAc",
+    "status": "watched"
+  },
+  {
+    "id": "da4879bd-f465-4c42-94c5-38e85ed848dc",
+    "name": "Кабельщик",
+    "enName": "The Cable Guy",
+    "genre": "Комедия",
+    "year": "1996",
+    "rating": 5,
+    "image": "https://ipfs.filebase.io/ipfs/QmZiT3a1AuEJGDqSwpRCiASmUkai8Zg29w8X1zBqyXdWWy",
+    "status": "watched"
+  },
+  {
+    "id": "66e45633-85f5-46e7-9a7e-10d6df1a6524",
+    "name": "Школа рока",
+    "enName": "The School of Rock",
+    "genre": "Комедия",
+    "year": "2003",
+    "rating": null,
+    "image": "https://ipfs.filebase.io/ipfs/QmVmMixm3nKoHHqtRjStkd8epKYyc5JgVxezQkZnBXZxgZ",
+    "status": "progress"
+  },
+  {
+    "id": "98c7df4f-3b4f-4582-ba4d-b3ae38fb3ea7",
+    "name": "Куда приводят мечты",
+    "enName": "What Dreams May Come",
+    "genre": "Драма",
+    "year": "1998",
+    "rating": null,
+    "image": "https://ipfs.filebase.io/ipfs/QmSwGY75986erzDq1Uo5Xbieij2YKdDWiwVhvumijRx2GA",
+    "status": "progress"
+  },
+  {
+    "id": "e1146f90-08d0-46a6-bcd6-b4f5afde8075",
+    "name": "Закусочная на колёсах",
+    "enName": "Kuai can che",
+    "genre": "Боевик",
+    "year": "1984",
+    "rating": 5,
+    "image": "https://ipfs.filebase.io/ipfs/QmYPUyWpH2hkEwpFW44haxbWkdmXQn6QbeYkumKDsGertT",
+    "status": "watched"
+  },
+  {
+    "id": "888f37ac-3f17-4e1d-9e34-ecad1b33059e",
+    "name": "Пьяный мастер",
+    "enName": "Drunken Master",
+    "genre": "Боевик",
+    "year": "111",
+    "rating": null,
+    "image": "https://ipfs.filebase.io/ipfs/QmbL1gtqqYSZEjQh2U2sXZFYzDgd96qC3SjJJKWj57HFLk",
+    "status": "progress"
+  },
+  {
+    "id": "a34c36a2-4e6c-4770-969c-fcf6cd24a2ee",
+    "name": "     ",
+    "enName": "   ",
+    "genre": "   ",
+    "year": "12",
+    "rating": null,
+    "image": "https://ipfs.filebase.io/ipfs/QmeZPhfP9PivK1MqVcXzCsQzPS8U98Ddh5xk8iHpKsP9uN",
+    "status": "progress"
+  },
+  {
+    "id": "35ed2df7-c9a1-40a9-a3fe-b81026d06cb7",
+    "name": "      assd",
+    "enName": "    ",
+    "genre": "   ",
+    "year": "12",
+    "rating": null,
+    "image": "https://ipfs.filebase.io/ipfs/QmVmMixm3nKoHHqtRjStkd8epKYyc5JgVxezQkZnBXZxgZ",
+    "status": "progress"
+  }
+]
