@@ -26,7 +26,6 @@ export const errorSlice = createSlice({
 				state.message = "";
 			})
 			.addCase(getMoviesThunk.rejected, (state, action) => {
-				console.log(action);
 				if (action.payload?.message) {
 					state.message = action.payload.message;
 					state.type = action.payload.type;
@@ -36,7 +35,6 @@ export const errorSlice = createSlice({
 				state.message = "";
 			})
 			.addCase(updateMovieThunk.rejected, (state, action) => {
-				console.log(action);
 				if (action.payload?.message) {
 					state.message = action.payload.message;
 					state.type = action.payload.type;

@@ -23,11 +23,9 @@ class MovieController {
 			const movieObj = req.body;
 			const file = req.file;
 
-			console.log(movieObj, file);
 			const movie = await MovieSevice.addMovie(movieObj, file);
 			res.status(201).json({ data: movie });
 		} catch (e) {
-			console.log(e);
 			handleError(res, e);
 		}
 	}
@@ -38,7 +36,6 @@ class MovieController {
 			const movie = await MovieSevice.updateMovie(movieObj);
 			res.status(200).json({ data: movie });
 		} catch (e) {
-			console.log(e);
 			handleError(res, e);
 		}
 	}
@@ -46,11 +43,9 @@ class MovieController {
 	async deleteMovie(req, res) {
 		try {
 			const movieObj = req.body;
-			console.log(movieObj);
 			const movie = await MovieSevice.deleteMovie(movieObj);
 			res.status(200).json({ data: movie });
 		} catch (e) {
-			console.log(e);
 			handleError(res, e);
 		}
 	}

@@ -11,6 +11,7 @@ module.exports = class Movie {
 	movieLength;
 	image;
 	status;
+	createdDate;
 
 	constructor({ obj, imagePath }) {
 		this.id = uuid.v4();
@@ -22,5 +23,6 @@ module.exports = class Movie {
 		this.movieLength = obj.movieLength;
 		this.image = imagePath;
 		this.status = MOVIE_STATUS.PROGRESS;
+		this.createdDate = obj.createdDate;
 	}
 };

@@ -17,7 +17,6 @@ class MovieApi {
 			const queriesString = [offsetQueryTemplate, limitQueryTemplate, viewModeQueryTemplate, searchQueryTemplate]
 				.filter(q => !!q)
 				.join("&");
-			console.log(queriesString);
 
 			const res = await client.get(MOVIES_ROUTE + (queriesString ? `?${queriesString}` : ""));
 			return res.data;
