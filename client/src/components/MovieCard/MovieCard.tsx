@@ -19,8 +19,9 @@ export const MovieCard: React.FC<MovieCardProps> = ({ movie, className }) => {
 	const dispatch = useDispatch<AppDispatch>();
 
 	const handleDeleteMovie = (movieToDelete: Movie) => {
-		dispatch(deleteMovieThunk(movieToDelete));
-		dispatch(getMoviesThunk(null));
+		dispatch(deleteMovieThunk(movieToDelete)).then(() => {
+			dispatch(getMoviesThunk(null));
+		});
 	};
 
 	const handleSetWatchedMovie = (movieToWatch: Movie) => {
