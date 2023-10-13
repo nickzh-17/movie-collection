@@ -11,6 +11,7 @@ interface MovieState {
 	currentPage: number;
 	viewMode: ViewMode;
 	query: string;
+	isLoading: boolean;
 }
 
 const initialState: MovieState = {
@@ -20,6 +21,7 @@ const initialState: MovieState = {
 	currentPage: 1,
 	viewMode: "all",
 	query: "",
+	isLoading: false,
 };
 
 export const movieSlice = createSlice({
@@ -28,6 +30,10 @@ export const movieSlice = createSlice({
 	reducers: {
 		setMovies: (state, action: PayloadAction<Movie[]>) => {
 			state.movies = action.payload;
+		},
+		clearMovies: state => {
+			state.movies = [];
+			state.totalRecords = 0;
 		},
 		setViewMode: (state, action: PayloadAction<ViewMode>) => {
 			if (VIEW_MODES_FOR_EDIT.includes(action.payload)) {
@@ -48,25 +54,40 @@ export const movieSlice = createSlice({
 	},
 	extraReducers: builder => {
 		builder
+			.addCase(getMoviesThunk.pending, (state, action) => {
+				state.isLoading = true;
+			})
 			.addCase(getMoviesThunk.fulfilled, (state, action) => {
 				state.movies = action.payload.data;
 				state.totalRecords = action.payload.total;
+				state.isLoading = false;
+			})
+			.addCase(deleteMovieThunk.pending, (state, action) => {
+				state.isLoading = true;
 			})
 			.addCase(deleteMovieThunk.fulfilled, (state, action) => {
 				const deletedMovieObj = action.payload.data;
 
 				const updatedMovies = state.movies.filter(m => m.id !== deletedMovieObj.id);
 				state.movies = updatedMovies;
+
+				state.isLoading = false;
+			})
+			.addCase(updateMovieThunk.pending, (state, action) => {
+				state.isLoading = true;
 			})
 			.addCase(updateMovieThunk.fulfilled, (state, action) => {
 				const updatedMovieObj = action.payload.data;
-
 				if (!state.movies.length) return;
 
 				const movieToUpdate = state.movies.find(m => m.id === updatedMovieObj.id);
 				if (!movieToUpdate) return;
 
 				Object.assign(movieToUpdate, updatedMovieObj);
+				state.isLoading = false;
+			})
+			.addCase(addMovieThunk.pending, (state, action) => {
+				state.isLoading = true;
 			})
 			.addCase(addMovieThunk.fulfilled, (state, action) => {
 				if (
@@ -77,11 +98,12 @@ export const movieSlice = createSlice({
 				) {
 					const updatedMovieObj = action.payload.data;
 					state.movies.push(updatedMovieObj);
+					state.isLoading = false;
 				}
 			});
 	},
 });
 
-export const { setMovies, setViewMode, setCurrentPage, setQuery } = movieSlice.actions;
+export const { setMovies, setViewMode, setCurrentPage, setQuery, clearMovies } = movieSlice.actions;
 
 export default movieSlice.reducer;
