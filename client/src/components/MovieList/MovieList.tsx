@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux/es/exports";
 import { AppDispatch } from "store";
 import { getMoviesThunk } from "store/movie/movie.action";
-import { setCurrentPage, setViewMode } from "store/movie/movie.reducer";
+import { clearMovies, setCurrentPage, setViewMode } from "store/movie/movie.reducer";
 import { getMovieSlice } from "store/movie/movie.selector";
 import { ViewMode } from "types/movie";
 
@@ -18,12 +18,20 @@ export const MovieList: React.FC<MovieListProps> = () => {
 
 	const handleChangeViewMode = (newViewMode: ViewMode) => {
 		if (viewMode === newViewMode) return;
+		dispatch(clearMovies());
 		dispatch(setViewMode(newViewMode));
+		dispatch(getMoviesThunk(null));
+	};
+
+	const handleChangePage = (newPageNum: number) => {
+		if (newPageNum === currentPage) return;
+		dispatch(setCurrentPage(newPageNum));
+		dispatch(getMoviesThunk(null));
 	};
 
 	useEffect(() => {
 		dispatch(getMoviesThunk(null));
-	}, [recordsPerPage, currentPage, viewMode, totalRecords, query]);
+	}, [query]);
 
 	useEffect(() => {
 		dispatch(setCurrentPage(1));
@@ -38,10 +46,7 @@ export const MovieList: React.FC<MovieListProps> = () => {
 					totalRecords: totalRecords,
 					currentPage: currentPage,
 					recordsPerPage: recordsPerPage,
-					onChangePage: newPageNum => {
-						if (newPageNum === currentPage) return;
-						dispatch(setCurrentPage(newPageNum));
-					},
+					onChangePage: handleChangePage,
 				}}
 				controls={[
 					<Button
